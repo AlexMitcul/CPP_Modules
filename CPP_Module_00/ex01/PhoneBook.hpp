@@ -6,7 +6,7 @@
 /*   By: amitcul <amitcul@student.42porto.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 21:29:58 by amitcul           #+#    #+#             */
-/*   Updated: 2023/01/28 21:38:15 by amitcul          ###   ########.fr       */
+/*   Updated: 2023/01/31 19:31:54 by amitcul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,20 @@
 
 #include "Contact.hpp"
 
+#include <vector>
+#include <iterator>
+#include <iomanip>
+#include <iostream>
+
 class PhoneBook {
 private:
-	Contact _contacts[8];
+	std::vector<Contact> _contacts;
+
 public:
-	PhoneBook();
-	~PhoneBook();
-	void add(void);
+	int size(void);
+	void add(const Contact& contact);
 	void search(void) const;
-	void exit(void) const;
+	const Contact& getContact(size_t index) const;
 };
 
 #endif
