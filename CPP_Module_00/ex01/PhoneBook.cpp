@@ -6,23 +6,18 @@
 /*   By: amitcul <amitcul@student.42porto.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 21:33:56 by amitcul           #+#    #+#             */
-/*   Updated: 2023/01/31 19:29:53 by amitcul          ###   ########.fr       */
+/*   Updated: 2023/02/01 11:17:44 by amitcul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-void PhoneBook::add(const Contact& contact) {
-	size_t index;
-	std::vector<Contact>::iterator it;
+void PhoneBook::add(Contact contact) {
 
-	index = this->_contacts.size();
-	it = this->_contacts.begin() + index % 8;
-	this->_contacts.insert(it, contact);
 }
 
-int PhoneBook::size(void) {
-	return this->_contacts.size();
+int PhoneBook::size(void) const {
+	return this->_size;
 }
 
 const Contact& PhoneBook::getContact(size_t index) const {
@@ -30,7 +25,7 @@ const Contact& PhoneBook::getContact(size_t index) const {
 }
 
 void PhoneBook::search(void) const {
-	for (size_t i = 0; i < this->_contacts.size(); ++i) {
+	for (size_t i = 0; i < this->_size; ++i) {
 		std::cout << std::setw(10) << i << "|";
 		Contact contact = this->_contacts[i];
 		std::cout << std::setw(10) << contact.getFirstName() << "|";

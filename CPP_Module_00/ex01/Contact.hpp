@@ -6,7 +6,7 @@
 /*   By: amitcul <amitcul@student.42porto.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 21:31:13 by amitcul           #+#    #+#             */
-/*   Updated: 2023/01/31 19:30:43 by amitcul          ###   ########.fr       */
+/*   Updated: 2023/02/01 11:16:58 by amitcul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ private:
 	std::string	_nickname;
 	std::string	_darkestSecret;
 	std::string _phoneNumber;
+
 
 public:
 	Contact(std::string firstName, std::string lastName, std::string nickname,
