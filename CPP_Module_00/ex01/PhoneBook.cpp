@@ -6,14 +6,17 @@
 /*   By: amitcul <amitcul@student.42porto.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 21:33:56 by amitcul           #+#    #+#             */
-/*   Updated: 2023/02/01 11:17:44 by amitcul          ###   ########.fr       */
+/*   Updated: 2023/02/03 11:39:05 by amitcul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-void PhoneBook::add(Contact contact) {
-
+void PhoneBook::add(void) {
+	this->_contacts[this->_size % 8].fillData();
+	this->_size++;
+	if (this->_size >= 8)
+		this->_size = 0;
 }
 
 int PhoneBook::size(void) const {

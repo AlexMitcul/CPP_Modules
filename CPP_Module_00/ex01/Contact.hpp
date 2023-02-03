@@ -6,7 +6,7 @@
 /*   By: amitcul <amitcul@student.42porto.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 21:31:13 by amitcul           #+#    #+#             */
-/*   Updated: 2023/02/01 11:16:58 by amitcul          ###   ########.fr       */
+/*   Updated: 2023/02/03 11:38:15 by amitcul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,18 @@ private:
 	std::string	_firstName;
 	std::string	_lastName;
 	std::string	_nickname;
-	std::string	_darkestSecret;
 	std::string _phoneNumber;
+	std::string	_darkestSecret;
 
+	std::string _readFromInput(std::string prompt);
 
 public:
-	Contact(std::string firstName, std::string lastName, std::string nickname,
-		std::string phoneNumber, std::string darkestSecret);
+	Contact();
+	// Contact(std::string firstName, std::string lastName, std::string nickname,
+	// 	std::string phoneNumber, std::string darkestSecret);
 	~Contact();
+
+	void		fillData(void);
 
 	void		displayFullInfo(void) const;
 	std::string	getFirstName(void) const;
